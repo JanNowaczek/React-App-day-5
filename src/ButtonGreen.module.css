@@ -1,15 +1,7 @@
-.jfddl7Button {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    
-    color: white;
+.buttonGreen{
     background-color: green;
 }
 
-.otherClass{
-    text-align: center;
-}
+
 
 
