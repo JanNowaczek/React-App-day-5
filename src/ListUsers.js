@@ -1,26 +1,15 @@
 import React from 'react'
 
-import { loadUsers } from './logic'
-import UserItem from './UserItem'
+import List from './List'
 
-const ListUsers = (props) =>{
-    const users = loadUsers()
-
-
-    return(
-        <div>
-            {
-                users.map(
-                    user => (
-                       <UserItem 
-                        key={user.uuid}
-                        user={user}
-                       />
-                    )
-                )
-            }
-        </div>
-    )
+class ListUsers extends React.Component {
+    redner(){
+        return(
+            <div>
+                <List />
+            </div>
+        )
+    }
 }
 
 export default ListUsers
