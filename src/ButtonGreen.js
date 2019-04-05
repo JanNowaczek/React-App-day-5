@@ -1,14 +1,15 @@
-import React from 'react';
-import './ButtonGreen.css'
+import React from 'react'
+
+import {jfddl7Button} from'./ButtonGreen.module.css'
 
 const ButtonGreen = (props) => (
-      <div
-      className={'jfddl7-button'}
-      >
+    <div
+        className={jfddl7Button}
+    >
         ButtonGreen
-      </div>
+    </div>
 )
-  
+
 
 
 export default ButtonGreen;
