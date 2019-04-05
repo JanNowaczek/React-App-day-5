@@ -21,11 +21,16 @@ const saveUser = (user) => {
     )
 }
 
-saveUser(
-    new User('Jasiek', 'a@example.com')
-)
-saveUser(
-    new User('Jasiek', 'a@example.com')
-)
+const deleteUser = (index) => {
+    const currentUsers = loadUsers()
 
-console.log(loadUsers())
+    const newUsers = currentUsers.filter((user, userIndex) => userIndex !== index)
+
+    localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify(newUsers)
+    )
+}
+
+
+window.deleteUser = deleteUser
