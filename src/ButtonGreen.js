@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './ButtonGreen.css'
 
 const ButtonGreen = (props) => (
       <div
