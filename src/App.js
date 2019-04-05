@@ -1,14 +1,18 @@
 import React from 'react'
 
-import './logic'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import AddUser from './AddUser'
 import ListUsers from './ListUsers'
 
 const App = (props) => (
   <div>
-      <ListUsers />
-      <AddUser />
+    <Router>
+      <Link to={'/'}>Lista</Link> <Link to={'/add'}>Dodaj</Link>
+      <Route exact path={'/'} component={ListUsers} />
+      <Route path={'/add'} component={AddUser} />
+      </Router>
+      
   </div>
 )
-
-export default App
+    
+    export default App
