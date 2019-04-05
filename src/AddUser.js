@@ -14,6 +14,9 @@ class AddUser extends React.Component {
     })
 
     addClickHandler = () => {
+        if (!this.state.name) return
+        if (!this.state.email) return
+
         const user = new User(this.state.name, this.state.email, this.state.avatar)
 
         saveUser(user)
@@ -22,17 +25,17 @@ class AddUser extends React.Component {
     render() {
         return (
             <div>
-                <input 
+                <input
                     placeholder={'Wpisz imie'}
                     value={this.state.name}
                     onChange={this.inputChangeHandler('name')}
                 />
-                <input 
+                <input
                     placeholder={'Wpisz email'}
                     value={this.state.email}
-                    onChange={this.inputChangeHandler('email')}
+                    onChange={this.inputChangeHandler('e-mail')}
                 />
-                <input 
+                <input
                     placeholder={'Wpisz URL zdjecia'}
                     value={this.state.avatar}
                     onChange={this.inputChangeHandler('avatar')}
