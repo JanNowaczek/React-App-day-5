@@ -18,10 +18,15 @@ class ListUsers extends React.Component {
     }
 
     render(){
+        const filteredUsers = this.state.users.filter(
+            user => true
+        )
+
         return(
             <div>
                 <List
-                    users={this.state.users}
+                    users={filteredUsers}
+                    deleteUserAndReRender={this.deleteUserAndReRender}
                 />
             </div>
         )

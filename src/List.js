@@ -11,6 +11,7 @@ const List = (props) => {
                         <UserItem
                             key={user.uuid}
                             user={user}
+                            deleteUserAndReRender={props.deleteUserAndReRender}
                         />
                     )
                 )
