@@ -1,21 +1,17 @@
 import React from 'react'
 
-import { loadUsers } from './logic'
 import UserItem from './UserItem'
 
-const List = (props) =>{
-    const users = loadUsers()
-
-
-    return(
+const List = (props) => {
+    return (
         <div>
             {
-                users.map(
+                props.users.map(
                     user => (
-                       <UserItem 
-                        key={user.uuid}
-                        user={user}
-                       />
+                        <UserItem
+                            key={user.uuid}
+                            user={user}
+                        />
                     )
                 )
             }

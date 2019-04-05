@@ -2,11 +2,27 @@ import React from 'react'
 
 import List from './List'
 
+import { loadUsers, deleteUser } from './logic'
+
 class ListUsers extends React.Component {
-    redner(){
+    state = {
+        users: loadUsers(),
+    }
+
+    deleteUserAndReRender = (uuid) => {
+        deleteUser(uuid)
+
+        this.setState({
+            users: loadUsers(),
+        })
+    }
+
+    render(){
         return(
             <div>
-                <List />
+                <List
+                    users={this.state.users}
+                />
             </div>
         )
     }

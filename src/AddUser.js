@@ -33,7 +33,7 @@ class AddUser extends React.Component {
                 <input
                     placeholder={'Wpisz email'}
                     value={this.state.email}
-                    onChange={this.inputChangeHandler('e-mail')}
+                    onChange={this.inputChangeHandler('email')}
                 />
                 <input
                     placeholder={'Wpisz URL zdjecia'}
