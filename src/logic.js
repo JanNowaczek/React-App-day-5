@@ -1,7 +1,11 @@
+import uuidv1 from 'uuid/v1'
+
+console.log(uuidv1())
+
 const LOCAL_STORAGE_KEY = 'jfddl7-users'
 
 class User {
-    constructor(name, email, avatar){
+    constructor(name, email, avatar) {
         this.name = name
         this.email = email
         this.avatar = avatar
@@ -31,6 +35,5 @@ const deleteUser = (index) => {
         JSON.stringify(newUsers)
     )
 }
-
 
 window.deleteUser = deleteUser
